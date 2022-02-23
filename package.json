@@ -1,0 +1,22 @@
+{
+	"name": "troika-comisiones",
+	"version": "1.0.0",
+	"description": "Programa para calcular las comisiones de los mecánicos por Troika ",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon src/index.js"
+	},
+	"author": "Adrian Zambrano",
+	"license": "ISC",
+	"dependencies": {
+		"connect-flash": "^0.1.1",
+		"express": "^4.17.3",
+		"express-handlebars": "^6.0.2",
+		"express-session": "^1.17.2",
+		"method-override": "^3.0.0",
+		"mongoose": "^6.2.3"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	}
+}
