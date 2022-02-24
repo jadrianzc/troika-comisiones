@@ -1,9 +1,8 @@
 const express = require('express');
 const path = require('path');
-const exphbs = require('express-handlebars').engine;
-const { extname } = require('path');
-const methodOverride = require('method-override');
+const exphbs = require('express-handlebars');
 const session = require('express-session');
+// const methodOverride = require('method-override');
 
 // Initiliazations
 const app = express();
@@ -13,7 +12,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine(
 	'.hbs',
-	exphbs({
+	exphbs.engine({
 		defaultLayout: 'main',
 		layoutsDir: path.join(app.get('views'), 'layouts'),
 		partialsDir: path.join(app.get('views'), 'partials'),
@@ -24,7 +23,7 @@ app.set('view engine', '.hbs');
 
 // Middlewares
 app.use(express.urlencoded({ extended: false }));
-app.use(methodOverride('_method'));
+// app.use(methodOverride('_method'));
 app.use(
 	session({
 		secret: 'mysecretapp',
@@ -36,7 +35,7 @@ app.use(
 // Global Variables
 
 // Routes
-app.use(require('./routes/index'));
+app.use(require('./routes/index.routes'));
 
 // Static Files
 
