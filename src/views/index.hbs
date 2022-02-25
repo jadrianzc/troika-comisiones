@@ -1,19 +1,25 @@
-<div class='mb-3'>
-	<label for='fecha' class='form-label'>FECHA:</label>
-	<input type='date' class='form-control' id='fecha' />
-</div>
-<div class='mb-3'>
-	<label for='factura' class='form-label'>FACTURA:</label>
-	<input type='text' class='form-control' id='factura' />
-</div>
-<div class='mb-3'>
-	<label for='mecanico' class='form-label'>MECÁNICO:</label>
-	<select class='form-select' id='mecanico' aria-label='Default select example'>
-		<option selected></option>
-		<option value='1'>Juan Delgado</option>
-		<option value='2'>Carlos Anchundia</option>
-		<option value='3'>Ricardo Anchundia</option>
-	</select>
+<div class="container">
+	<div class="col-12">
+		<div class="col-6">
+			<div class='mb-3'>
+				<label for='fecha' class='form-label'>FECHA:</label>
+				<input type='date' class='form-control' id='fecha' />
+			</div>
+			<div class='mb-3'>
+				<label for='factura' class='form-label'>FACTURA:</label>
+				<input type='text' class='form-control' id='factura' />
+			</div>
+			<div class='mb-3'>
+				<label for='mecanico' class='form-label'>MECÁNICO:</label>
+				<select class='form-select' id='mecanico' aria-label='Default select example'>
+					<option selected></option>
+					<option value='1'>Juan Delgado</option>
+					<option value='2'>Carlos Anchundia</option>
+					<option value='3'>Ricardo Anchundia</option>
+				</select>
+			</div>
+		</div>
+	</div>
 </div>
 
 {{> table}}
