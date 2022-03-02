@@ -1,0 +1,59 @@
+<div class="container">
+    {{!-- Botones --}}
+    <div class="btn-group d-flex" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary col-4 m-1">Calcular</button>
+        <button type="button" class="btn btn-primary col-4 m-1">Guardar</button>
+        <a href="/" class="btn btn-danger col-4 m-1">Salir</a>
+    </div>
+
+    {{!-- Datos factura --}}
+	<div class="col-12 d-flex">
+		<div class="col-7 p-3">
+            {{!-- FECHA --}}
+			<div class='mb-3 d-flex align-items-center col-6'>
+				<label for='fecha' class='form-label col-4 m-0'>Fecha:</label>
+				<input type='date' class='form-control' style="width: 55% !important" id='fecha' />
+			</div>
+            {{!-- FACTURA --}}
+            <div class='mb-3 col-6 d-flex align-items-center'>
+                <label for='factura' class='form-label col-4 m-0'>Factura:</label>
+                <input type='text' class='form-control' style="width: 55% !important" id='factura' />
+            </div>
+            <div class="d-flex col-12">
+                {{!-- CÓDIGO --}}
+                <div class='mb-3 d-flex align-items-center col-6'>
+                    <label for='cod' class='form-label col-4 m-0'>Código:</label>
+                    <input type='text' class='form-control' style="width: 55% !important" id='cod' />
+                </div>
+                {{!-- MECÁNICO --}}
+                <div class='mb-3 col-6 d-flex align-items-center'>
+                    <label for='mecanico' class='form-label col-4 m-0'>Mecánico:</label>
+                    <select class='form-select' style="width: 80% !important" id='mecanico' aria-label='Default select example'>
+                        <option selected></option>
+                        <option value='1'>Juan Delgado</option>
+                        <option value='2'>Carlos Anchundia</option>
+                        <option value='3'>Ricardo Anchundia</option>
+                    </select>
+			    </div>
+            </div>    
+		</div>
+		<div class="col-5 p-3">
+            {{!-- BOTÓN --}}
+            <div class='mb-3 d-flex align-items-center justify-content-center'>
+				<button type="button" class="btn btn-secondary col-4 m-1">Calcular</button>
+			</div>
+            {{!-- TOTAL COMISIÓN CÉSAR --}}
+            <div class='mb-3 d-flex align-items-center'>
+				<label for='factura' class='form-label col-6 m-0'>Total Comisión César:</label>
+				<input type='text' class='form-control' id='factura' readonly/>
+			</div>
+            {{!-- TOTAL COMISIÓN MECÁNICO --}}
+			<div class='mb-3 d-flex align-items-center'>
+				<label for='cod' class='form-label col-6 m-0'>Total Comisión Mecánico:</label>
+				<input type='text' class='form-control' id='cod' readonly/>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{> table}}
