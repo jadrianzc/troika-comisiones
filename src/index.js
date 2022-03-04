@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
+const morgan = require('morgan');
 require('./database');
 // const methodOverride = require('method-override');
 
@@ -32,6 +33,7 @@ app.use(
 		saveUninitialized: true,
 	})
 );
+app.use(morgan('dev'));
 
 // Global Variables
 
